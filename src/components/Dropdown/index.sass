@@ -1,0 +1,52 @@
+.Dropdown
+    position: relative
+    font-size: 1.4rem
+    color: #555555
+    &__placeholder
+        line-height: 150%
+    &__arrow
+        display: flex
+        margin-left: 4px
+        &-icon
+            fill: #AAB7D4
+            transition: .3s
+    &__control
+        display: flex
+        align-items: center
+        user-select: none
+        cursor: pointer
+        &:hover
+            .Dropdown__arrow-icon
+                fill: #7B8AAB
+    &__menu
+        display: none
+        position: absolute
+        top: calc( 100% + 0.9rem )
+        width: 16.7rem
+        background: #FFFFFF
+        box-shadow: 0px 0px 2px #EEF4FE, 0px 1px 2px #D0DAEB
+        border-radius: 7px
+        overflow: hidden
+        z-index: 1
+    &__option
+        position: relative
+        line-height: 160%
+        padding: 1.2rem 1.6rem
+        cursor: pointer
+        transition: .3s
+        &::before
+            content: ""
+            display: block
+            position: absolute
+            left: 0
+            top: 0
+            width: 100%
+            height: 100%
+        &:hover::before
+            background: rgba(212, 219, 233, 0.25)
+    &.is-open
+        .Dropdown
+            &__arrow-icon
+                transform: rotate(180deg)
+            &__menu
+                display: block

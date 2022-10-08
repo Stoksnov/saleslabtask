@@ -1,0 +1,50 @@
+.Cards
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    gap: 1.6rem
+    &__item
+        display: flex
+        padding: 1.6rem
+        box-shadow: 0px 0px 2px #EEF4FE, 0px 1px 2px #D0DAEB
+        border-radius: 7px
+        cursor: pointer
+        &-icon
+            fill: #fff
+            &-wrap
+                display: flex
+                align-items: center
+                justify-content: center
+                position: relative
+                width: 5.8rem
+                height: 5.8rem
+                margin-right: 1.6rem
+                border-radius: 12px
+                border: 1px solid rgba(0, 0, 0, 0.15)
+        &-title
+            font-size: 1.8rem
+            line-height: 130%
+            margin-bottom: 2px
+        &-desc
+            font-size: 1.8rem
+            line-height: 150%
+            color: #373737
+        &_purple
+            .Cards__item-title
+                color: #C37ADD
+            .Cards__item-icon-wrap
+                background: #C37ADD
+        &_green
+            .Cards__item-title
+                color: #63D422
+            .Cards__item-icon-wrap
+                background: #63D422
+        &_red
+            .Cards__item-title
+                color: #F56C6C
+            .Cards__item-icon-wrap
+                background: #F56C6C
+        &_blue
+            .Cards__item-title
+                color: #2BBEF8
+            .Cards__item-icon-wrap
+                background: #2BBEF8
